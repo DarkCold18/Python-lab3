@@ -13,7 +13,7 @@ baggage_data = {
 # а) кількість пасажирів, які мають більше двох речей
 passengers_more_than_two = sum(1 for data in baggage_data.values() if data['items'] > 2)
 print(f"а) Кількість пасажирів, які мають більше двох речей: {passengers_more_than_two}")
-# б) чи є хоч один пасажир, багаж якого складається з однієї речі вагою менше 25 кг
+# б) чи є хоч один пасажир, багаж якого складається з однієї речі вагою менше 25 кг.
 has_one_light_item = any(data['items'] == 1 and data['weight'] < 25 for data in baggage_data.values())
 if has_one_light_item:
     print("б) Так, є хоча б один такий пасажир.")
